@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Description: client for the SOAP Calendar Server
  */
@@ -40,11 +40,11 @@ if ( PEAR::isError($month) ) {
 <body>
 <h1>Calendar Over the Wire (featuring PEAR::SOAP)</h1>
 <table>
-<caption><b><?php echo ( $month->monthname );?></b></caption>
+<caption><b><?hh echo ( $month->monthname );?></b></caption>
 <tr>
 <th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th>
 </tr>
-<?php
+<?hh
 foreach ( $month->days as $day ) {
 
     if ( $day->isFirst === 1 )
@@ -61,9 +61,9 @@ foreach ( $month->days as $day ) {
 <tr>
 </table>
 <p>Enter Year and Month to View:</p>
-<form action="<?php echo ( $_SERVER['PHP_SELF'] ); ?>" method="get">
-Year: <input type="text" size="4" name="y" value="<?php echo ( $_GET['y'] ); ?>">&nbsp;
-Month: <input type="text" size="2" name="m" value="<?php echo ( $_GET['m'] ); ?>">&nbsp;
+<form action="<?hh echo ( $_SERVER['PHP_SELF'] ); ?>" method="get">
+Year: <input type="text" size="4" name="y" value="<?hh echo ( $_GET['y'] ); ?>">&nbsp;
+Month: <input type="text" size="2" name="m" value="<?hh echo ( $_GET['m'] ); ?>">&nbsp;
 <input type="submit" value="Fetch Calendar">
 </form>
 </body>

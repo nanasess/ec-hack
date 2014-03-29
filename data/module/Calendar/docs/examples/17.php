@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates using the Textual decorator
 */
@@ -43,16 +43,16 @@ $Textual = & new Calendar_Decorator_Textual($Calendar);
 ?>
 <p>Rendering calendar....</p>
 <table>
-<caption><?php echo $Textual->thisMonthName().' '.$Textual->thisYear(); ?></caption>
+<caption><?hh echo $Textual->thisMonthName().' '.$Textual->thisYear(); ?></caption>
 <tr>
-<?php
+<?hh
 $dayheaders = $Textual->orderedWeekdays('short');
 foreach ($dayheaders as $dayheader) {
     echo '<th>'.$dayheader.'</th>';
 }
 ?>
 </tr>
-<?php
+<?hh
 $Calendar->build();
 while ($Day = $Calendar->fetch()) {
     if ($Day->isFirst()) {

@@ -1,4 +1,4 @@
-<?php
+<?hh
 // $Id: minute_test.php,v 1.1 2004/05/24 22:25:43 quipo Exp $
 
 require_once('simple_include.php');

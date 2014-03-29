@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This file loads all required libraries, defines constants used across the
  * SOAP package, and defines the base classes that most other classes of this

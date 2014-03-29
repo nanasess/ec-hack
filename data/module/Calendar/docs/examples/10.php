@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates a decorator to provide simple output formatting
 * on the month while still allowing the days to be accessed via the decorator
@@ -67,8 +67,8 @@ $MonthDecorator->build();
 <body>
 <h1>A Simple Decorator</h1>
 <table>
-<caption><?php echo ( $MonthDecorator->thisMonth() ); ?></caption>
-<?php
+<caption><?hh echo ( $MonthDecorator->thisMonth() ); ?></caption>
+<?hh
 while ( $Day = $MonthDecorator->fetch() ) {
     if ( $Day->isFirst() ) {
         echo ( "\n<tr>\n" );
@@ -84,9 +84,9 @@ while ( $Day = $MonthDecorator->fetch() ) {
 }
 ?>
 <tr>
-<td><a href="<?php echo ($MonthDecorator->prevMonth()); ?>">Prev</a></td>
+<td><a href="<?hh echo ($MonthDecorator->prevMonth()); ?>">Prev</a></td>
 <td colspan="5">&nbsp;</td>
-<td><a href="<?php echo ($MonthDecorator->nextMonth()); ?>">Next</a></td>
+<td><a href="<?hh echo ($MonthDecorator->nextMonth()); ?>">Next</a></td>
 </tr>
 </table>
 </body>

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: Demonstrates building a calendar for a month using the Week class
 * Uses UnixTs engine
@@ -88,7 +88,7 @@ td {
 <h2>Build with Calendar_Month_Weeks::build() then Calendar_Week::build()</h2>
 <table class="calendar">
 <caption>
-<?php echo date('F Y', $Month->getTimeStamp()); ?>
+<?hh echo date('F Y', $Month->getTimeStamp()); ?>
 </caption>
 <tr>
 <th>M</th>
@@ -99,7 +99,7 @@ td {
 <th>S</th>
 <th>S</th>
 </tr>
-<?php
+<?hh
 while ($Week = $Month->fetch()) {
     echo "<tr>\n";
     // Build the days in the week, passing the selected days
@@ -127,15 +127,15 @@ while ($Week = $Month->fetch()) {
 ?>
 <tr>
 <td>
-<a href="<?php echo $prev; ?>" class="prevMonth"><< </a>
+<a href="<?hh echo $prev; ?>" class="prevMonth"><< </a>
 </td>
 <td colspan="5">&nbsp;</td>
 <td>
-<a href="<?php echo $next; ?>" class="nextMonth"> >></a>
+<a href="<?hh echo $next; ?>" class="nextMonth"> >></a>
 </td>
 </tr>
 </table>
-<?php
+<?hh
 echo '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>';
 ?>
 </body>

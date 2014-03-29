@@ -1,4 +1,4 @@
-<?php
+<?hh
 //
 //  FPDF_TPL - Version 1.2
 //

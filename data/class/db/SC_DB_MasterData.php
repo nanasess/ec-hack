@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * This file is part of EC-CUBE
  *
@@ -262,7 +262,7 @@ class SC_DB_MasterData
         if ($isDefine) {
             $path = MASTER_DATA_REALDIR . $name . '.php';
 
-            $data = "<?php\n";
+            $data = "<?hh\n";
             // 定数コメントを生成する場合
             if (!empty($commentColumn)) {
                 $data .= $this->getMasterDataAsDefine($masterData, $this->getDbMasterData($name, $commentColumn));

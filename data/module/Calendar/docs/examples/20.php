@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates a decorator used to "attach a payload" to a selection
 * to make it available when iterating over calendar children
@@ -188,10 +188,10 @@ ul {
 
 <body>
 
-<h2>Sample Calendar Payload Decorator (using <?php echo CALENDAR_ENGINE; ?> engine)</h2>
+<h2>Sample Calendar Payload Decorator (using <?hh echo CALENDAR_ENGINE; ?> engine)</h2>
 <table class="calendar" width="98%" cellspacing="0" cellpadding="0">
 <caption>
-    <?php echo $MonthDecorator->thisMonth().' / '.$MonthDecorator->thisYear(); ?>
+    <?hh echo $MonthDecorator->thisMonth().' / '.$MonthDecorator->thisYear(); ?>
 </caption>
 <tr>
     <th>Monday</th>
@@ -202,7 +202,7 @@ ul {
     <th>Saturday</th>
     <th>Sunday</th>
 </tr>
-<?php
+<?hh
 while ($Day = $MonthDecorator->fetch()) {
 
     if ($Day->isFirst()) {

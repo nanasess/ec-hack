@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 $HOME = realpath(dirname(__FILE__)) . "/../../..";
 require_once($HOME . "/tests/class/SC_Product/SC_Product_TestBase.php");

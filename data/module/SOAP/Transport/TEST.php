@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This file contains the code for a local transport layer for testing
  * purposes.

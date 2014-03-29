@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * PEAR, the PHP Extension and Application Repository
  *

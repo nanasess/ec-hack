@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This file contains the code for the DISCO server, providing DISO and WSDL
  * services.

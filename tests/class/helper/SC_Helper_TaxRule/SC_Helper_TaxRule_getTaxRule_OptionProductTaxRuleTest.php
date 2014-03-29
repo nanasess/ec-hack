@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 $HOME = realpath(dirname(__FILE__)) . "/../../../..";
 // 商品別税率機能無効

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * Project:     Smarty: the PHP compiling template engine
@@ -188,7 +188,7 @@ class Smarty
     var $cache_modified_check = false;
 
     /**
-     * This determines how Smarty handles "<?php ... ?>" tags in templates.
+     * This determines how Smarty handles "<?hh ... ?>" tags in templates.
      * possible values:
      * <ul>
      *  <li>SMARTY_PHP_PASSTHRU -> print tags as plain text</li>

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: a SOAP Calendar Server
 */

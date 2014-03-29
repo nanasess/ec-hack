@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * The Mail_Mime class is used to create MIME E-mail messages
  *

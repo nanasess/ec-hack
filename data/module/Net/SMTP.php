@@ -1,4 +1,4 @@
-<?php
+<?hh
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |

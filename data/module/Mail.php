@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  *  PEAR's Mail:: interface.
  *

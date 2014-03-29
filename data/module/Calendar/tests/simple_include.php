@@ -1,4 +1,4 @@
-<?php
+<?hh
 // $Id: simple_include.php,v 1.1 2004/05/24 22:25:43 quipo Exp $
 if (!defined('SIMPLE_TEST')) {
     define('SIMPLE_TEST', '../../../simpletest/');

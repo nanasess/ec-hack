@@ -1,4 +1,4 @@
-<?php
+<?hh
 require('../fpdf.php');
 
 $pdf = new FPDF();

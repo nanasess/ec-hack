@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates a decorator used to "attach a payload" to a selection
 * to make it available when iterating over calendar children
@@ -74,12 +74,12 @@ $Day->build($selection);
 <body>
 <h1>Passing a Selection "Payload" using a Decorator</h1>
 <table>
-<caption><b>Your Schedule for <?php echo ( date('D nS F Y',$Day->thisDay(TRUE)) ); ?></b></caption>
+<caption><b>Your Schedule for <?hh echo ( date('D nS F Y',$Day->thisDay(TRUE)) ); ?></b></caption>
 <tr>
 <th width="5%">Time</th>
 <th>Entry</th>
 </tr>
-<?php
+<?hh
 while ( $Hour = & $Day->fetch() ) {
 
     $hour = $Hour->thisHour();
@@ -103,7 +103,7 @@ while ( $Hour = & $Day->fetch() ) {
 </table>
 <p>The query to fetch this data, with help from PEAR::Calendar, might be;</p>
 <pre>
-<?php echo ( $sql ); ?>
+<?hh echo ( $sql ); ?>
 </pre>
 </body>
 </html>

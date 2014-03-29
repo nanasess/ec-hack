@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: same as 3.php, but using the PEAR::Date engine
 * Note: make sure PEAR::Date is a stable release!!!
@@ -87,7 +87,7 @@ td {
 <h2>Calendar using PEAR::Date Engine</h2>
 <table class="calendar">
 <caption>
-<?php echo $thisDate->format('%B %Y'); ?>
+<?hh echo $thisDate->format('%B %Y'); ?>
 </caption>
 <tr>
 <th>M</th>
@@ -98,7 +98,7 @@ td {
 <th>S</th>
 <th>S</th>
 </tr>
-<?php
+<?hh
 while ($day = $month->fetch()) {
     // Build a link string for each day
     $link = $_SERVER['PHP_SELF'].
@@ -126,15 +126,15 @@ while ($day = $month->fetch()) {
 ?>
 <tr>
 <td>
-<a href="<?php echo $prev; ?>" class="prevMonth"><< </a>
+<a href="<?hh echo $prev; ?>" class="prevMonth"><< </a>
 </td>
 <td colspan="5">&nbsp;</td>
 <td>
-<a href="<?php echo $next; ?>" class="nextMonth"> >></a>
+<a href="<?hh echo $next; ?>" class="nextMonth"> >></a>
 </td>
 </tr>
 </table>
-<?php
+<?hh
 echo '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>';
 ?>
 </body>

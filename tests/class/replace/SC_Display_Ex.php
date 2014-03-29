@@ -1,4 +1,4 @@
-<?php
+<?hh
 require_once(realpath(dirname(__FILE__)) . "/../../../data/class/SC_Display.php");
 /**
  * テスト用にSC_Displayクラスを変更してユーザエージェントを自在に設定できるようにしたクラスです。

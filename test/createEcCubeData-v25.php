@@ -1,5 +1,5 @@
 #!/usr/local/bin/php -q
-<?php
+<?hh
 /*
  * EC-CUBE データ生成スクリプト
  *

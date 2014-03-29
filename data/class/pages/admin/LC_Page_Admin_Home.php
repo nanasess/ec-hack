@@ -1,5 +1,5 @@
 
-<?php
+<?hh
 /*
  * This file is part of EC-CUBE
  *

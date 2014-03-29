@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * This file is part of EC-CUBE
  *
@@ -94,7 +94,7 @@ class SC_ClassAutoloader
                             $replace = '$1' . $parent_classname . '$2';
 
                             $base_class_str = file_get_contents($plugin_classpath);
-                            $base_class_str = str_replace(array('<?php', '?>'), '', $base_class_str);
+                            $base_class_str = str_replace(array('<?hh', '?>'), '', $base_class_str);
                             $base_class_str = preg_replace($exp, $replace, $base_class_str, 1);
                             eval($base_class_str);
                         } else {
@@ -111,7 +111,7 @@ class SC_ClassAutoloader
                     $exp = "/(class[ ]+{$class}[ ]+extends +)[a-zA-Z_\-]+( *{?)/";
                     $replace = '$1' . $parent_classname . '$2';
                     $base_class_str = file_get_contents($classpath);
-                    $base_class_str = str_replace(array('<?php', '?>'), '', $base_class_str);
+                    $base_class_str = str_replace(array('<?hh', '?>'), '', $base_class_str);
                     $base_class_str = preg_replace($exp, $replace, $base_class_str, 1);
                     eval($base_class_str);
 

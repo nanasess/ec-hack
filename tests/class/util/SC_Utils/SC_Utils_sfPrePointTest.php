@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 $HOME = realpath(dirname(__FILE__)) . "/../../../..";
 // テスト用にデフォルトの丸め方法を指定

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Enter description here...
  *

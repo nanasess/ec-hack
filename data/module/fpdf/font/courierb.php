@@ -1,4 +1,4 @@
-<?php
+<?hh
 $type = 'Core';
 $name = 'Courier-Bold';
 $up = -100;

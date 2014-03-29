@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * This file is part of EC-CUBE
  *
@@ -209,12 +209,12 @@ class LC_Page_Admin_Basis_ZipInstall extends LC_Page_Admin_Ex
         ?>
         <html xmlns='http://www.w3.org/1999/xhtml' lang='ja' xml:lang='ja'>
         <head>
-            <meta http-equiv='Content-Type' content='text/html; charset=<?php echo CHAR_CODE ?>' />
+            <meta http-equiv='Content-Type' content='text/html; charset=<?hh echo CHAR_CODE ?>' />
         </head>
         <body>
         <p>DB 登録進捗状況</p>
         <div style='background-color: #494E5F;'>
-        <?php
+        <?hh
         // 一部のIEは256バイト以上受け取ってから表示を開始する。
         SC_Utils_Ex::sfFlush(true);
 
@@ -270,7 +270,7 @@ class LC_Page_Admin_Basis_ZipInstall extends LC_Page_Admin_Ex
                     document.open('text/html','replace');
                     document.clear();
                     document.write('<p>完了しました。<br />');
-                    document.write("<?php echo $cntInsert ?> 件を追加しました。</p>");
+                    document.write("<?hh echo $cntInsert ?> 件を追加しました。</p>");
                     document.write("<p><a href='?' target='_top'>戻る</a></p>");
                     document.close();
                 }
@@ -280,7 +280,7 @@ class LC_Page_Admin_Basis_ZipInstall extends LC_Page_Admin_Ex
         </script>
         </body>
         </html>
-        <?php
+        <?hh
     }
 
     public function openZipCsv()

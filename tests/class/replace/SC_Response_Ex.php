@@ -1,4 +1,4 @@
-<?php
+<?hh
 require_once(realpath(dirname(__FILE__)) . "/../../../data/class/SC_Response.php");
 /**
  * テスト用にexitしないSC_Responseクラスです。

@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Class for performing HTTP requests
  *

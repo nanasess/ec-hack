@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Smarty plugin
  * @package Smarty

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
 * This class extends Cache_Lite and uses output buffering to get the data to cache.

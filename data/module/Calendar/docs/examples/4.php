@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: shows how to perform validation with PEAR::Calendar
 */
@@ -35,7 +35,7 @@ if ($Unit->isValid()) {
 }
 ?>
 <p>Enter a date / time to validate:</p>
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+<form action="<?hh echo $_SERVER['PHP_SELF']; ?>" method="get">
 Year:   <input type="text" name="y" value="2039"><br />
 Month:  <input type="text" name="m" value="13"><br />
 Day:    <input type="text" name="d" value="32"><br />
@@ -46,4 +46,4 @@ Second: <input type="text" name="s" value="60"><br />
 </form>
 <p><b>Note:</b> Error messages can be controlled with the constants <code>CALENDAR_VALUE_TOOSMALL</code> and <code>CALENDAR_VALUE_TOOLARGE</code> - see <code>Calendar_Validator.php</code></p>
 
-<?php echo '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>'; ?>
+<?hh echo '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>'; ?>

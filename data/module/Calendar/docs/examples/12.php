@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: a complete year
 */
@@ -25,7 +25,7 @@ $Year->build();
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title> <?php echo ( $Year->thisYear() ); ?> </title>
+<title> <?hh echo ( $Year->thisYear() ); ?> </title>
 <style type="text/css">
 body {
     font-family: Georgia, serif;
@@ -62,15 +62,15 @@ th, td {
 <body>
 <table>
 <caption class="year">
-<?php echo ( $Year->thisYear() ); ?>
+<?hh echo ( $Year->thisYear() ); ?>
 <div id="next">
-<a href="?year=<?php echo ( $Year->nextYear() ); ?>">>></a>
+<a href="?year=<?hh echo ( $Year->nextYear() ); ?>">>></a>
 </div>
 <div id="prev">
-<a href="?year=<?php echo ( $Year->prevYear() ); ?>"><<</a>
+<a href="?year=<?hh echo ( $Year->prevYear() ); ?>"><<</a>
 </div>
 </caption>
-<?php
+<?hh
 $i = 0;
 while ( $Month = $Year->fetch() ) {
 
@@ -111,6 +111,6 @@ while ( $Month = $Year->fetch() ) {
 }
 ?>
 </table>
-<p>Took: <?php echo ((getmicrotime()-$start)); ?></p>
+<p>Took: <?hh echo ((getmicrotime()-$start)); ?></p>
 </body>
 </html>

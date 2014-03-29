@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * Listener for HTTP_Request and HTTP_Response objects
  *

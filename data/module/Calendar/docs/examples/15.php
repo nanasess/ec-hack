@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Shows more on how a week can be used
 */
@@ -33,8 +33,8 @@ if (!$Validator->isValidWeek()) {
 </head>
 <body>
 <h1>Paging Weeks</h1>
-<h2>Week: <?php echo $Week->thisWeek().' '.date('F Y',$Week->thisMonth(true)); ?></h2>
-<?php
+<h2>Week: <?hh echo $Week->thisWeek().' '.date('F Y',$Week->thisMonth(true)); ?></h2>
+<?hh
 $Week->build();
 while ($Day = $Week->fetch()) {
     echo '<p>'.date('jS F',$Day->thisDay(true))."</p>\n";
@@ -53,6 +53,6 @@ $nextWeekLink = $_SERVER['PHP_SELF'].
                     '&m='.$nextWeek['month'].
                     '&d='.$nextWeek['day'];
 ?>
-<p><a href="<?php echo $prevWeekLink; ?>"><<</a> | <a href="<?php echo $nextWeekLink; ?>">>></a></p>
+<p><a href="<?hh echo $prevWeekLink; ?>"><<</a> | <a href="<?hh echo $nextWeekLink; ?>">>></a></p>
 </body>
 </html>

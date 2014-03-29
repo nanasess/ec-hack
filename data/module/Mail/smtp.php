@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * SMTP implementation of the PEAR Mail interface. Requires the Net_SMTP class.
  *

@@ -1,4 +1,4 @@
-<?php
+<?hh
 $type = 'Core';
 $name = 'Helvetica-BoldOblique';
 $up = -100;

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
 * This class extends Cache_Lite and offers a cache system driven by a master file

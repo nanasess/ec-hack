@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates using the Textual util
 */
@@ -38,16 +38,16 @@ $Calendar = new Calendar_Month_Weekdays(date('Y'), date('n'), 6);
 ?>
 <p>Rendering calendar....</p>
 <table>
-<caption><?php echo Calendar_Util_Textual::thisMonthName($Calendar).' '.$Calendar->thisYear(); ?></caption>
+<caption><?hh echo Calendar_Util_Textual::thisMonthName($Calendar).' '.$Calendar->thisYear(); ?></caption>
 <tr>
-<?php
+<?hh
 $dayheaders = Calendar_Util_Textual::orderedWeekdays($Calendar,'short');
 foreach ($dayheaders as $dayheader) {
     echo '<th>'.$dayheader.'</th>';
 }
 ?>
 </tr>
-<?php
+<?hh
 $Calendar->build();
 while ($Day = $Calendar->fetch()) {
     if ($Day->isFirst()) {

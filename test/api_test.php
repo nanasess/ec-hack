@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * APIの動作確認・検証用プログラム
  *
@@ -109,42 +109,42 @@ EC-CUBE API TEST<br />
 <hr />
 <form action="?" method="POST" id="form">
 <input type="hidden" name="mode" id="mode" value="" />
-EndPoint:<input type="text" name="EndPoint" style="width:400px;" value="<?php echo htmlspecialchars($_REQUEST['EndPoint']); ?>" /><select name="type">
-<option value="json.php" <?php if($type =='json.php'){ echo 'selected';} ?>>json.php</option>
-<option value="xml.php" <?php if($type =='xml.php'){ echo 'selected';} ?>>xml.php</option>
-<option value="php.php" <?php if($type =='php.php'){ echo 'selected';} ?>>php.php</option>
-<option value="index.php" <?php if($type =='index.php'){ echo 'selected';} ?>>index.php</option>
+EndPoint:<input type="text" name="EndPoint" style="width:400px;" value="<?hh echo htmlspecialchars($_REQUEST['EndPoint']); ?>" /><select name="type">
+<option value="json.php" <?hh if($type =='json.php'){ echo 'selected';} ?>>json.php</option>
+<option value="xml.php" <?hh if($type =='xml.php'){ echo 'selected';} ?>>xml.php</option>
+<option value="php.php" <?hh if($type =='php.php'){ echo 'selected';} ?>>php.php</option>
+<option value="index.php" <?hh if($type =='index.php'){ echo 'selected';} ?>>index.php</option>
 </select><br />
-Service:<input type="text" name="Service" value="<?php echo htmlspecialchars($_REQUEST['Service']); ?>" /><br />
-Operation:<input type="text" name="Operation" value="<?php echo htmlspecialchars($_REQUEST['Operation']); ?>" /><br />
-<?php
+Service:<input type="text" name="Service" value="<?hh echo htmlspecialchars($_REQUEST['Service']); ?>" /><br />
+Operation:<input type="text" name="Operation" value="<?hh echo htmlspecialchars($_REQUEST['Operation']); ?>" /><br />
+<?hh
 for ($i = 0; $i < 10; $i++) {
     echo 'ExtArg[' . $i . ']:<input type="text" name="arg_key' . $i . '" value="' . htmlspecialchars($_REQUEST['arg_key' . $i]) . '" />:'
             . '<input type="text" name="arg_val' . $i . '" value="' . htmlspecialchars($_REQUEST['arg_val' . $i]) . '" /><br />';
 }
 ?>
-AccessKeyId: <input type="text" name="AccessKeyId" value="<?php echo htmlspecialchars($_REQUEST['AccessKeyId']); ?>" />&nbsp;
-SecretKey: <input type="text" name="SecretKey" value="<?php echo htmlspecialchars($_REQUEST['SecretKey']); ?>" />&nbsp;<br />
+AccessKeyId: <input type="text" name="AccessKeyId" value="<?hh echo htmlspecialchars($_REQUEST['AccessKeyId']); ?>" />&nbsp;
+SecretKey: <input type="text" name="SecretKey" value="<?hh echo htmlspecialchars($_REQUEST['SecretKey']); ?>" />&nbsp;<br />
 <input type="button" value="Signature生成⇒" onclick="makeSignature();" />
-Timestamp: <input type="text" name="Timestamp" value="<?php echo htmlspecialchars($_REQUEST['Timestamp']); ?>" />&nbsp;Signature: <input type="text" name="Signature" id="Signature" value="<?php echo htmlspecialchars($_REQUEST['Signature']); ?>" readonly /><br />
-<?php if($check_str != "") {
+Timestamp: <input type="text" name="Timestamp" value="<?hh echo htmlspecialchars($_REQUEST['Timestamp']); ?>" />&nbsp;Signature: <input type="text" name="Signature" id="Signature" value="<?hh echo htmlspecialchars($_REQUEST['Signature']); ?>" readonly /><br />
+<?hh if($check_str != "") {
     echo "<pre>{$check_str}</pre><br />";
 } ?>
 <input type="submit" />
 </form>
 <hr />
-REST URI: <a href="<?php echo $url;?>">Link</a><br />
-<textarea rows="1" cols="60"><?php echo htmlspecialchars($url);?></textarea>
+REST URI: <a href="<?hh echo $url;?>">Link</a><br />
+<textarea rows="1" cols="60"><?hh echo htmlspecialchars($url);?></textarea>
 <hr />
 Response:<br />
 <textarea rows="5" cols="100">
-<?php echo htmlspecialchars($response);?>
+<?hh echo htmlspecialchars($response);?>
 </textarea>
 </pre>
 <hr />
 Response decode:<br />
 <pre>
-<?php
+<?hh
 if($type =="json.php") {
       var_dump(json_decode($response));
 }else if($type=="xml.php") {
@@ -157,7 +157,7 @@ if($type =="json.php") {
 ?>
 </pre>
 <hr />
-<?php if($type=="json.php" && $_REQUEST['Signature'] == "") {?>
+<?hh if($type=="json.php" && $_REQUEST['Signature'] == "") {?>
 JavaScript:<div id="res"></div>
 <hr />
 <pre id="dump"></pre>
@@ -165,9 +165,9 @@ JavaScript:<div id="res"></div>
 
 <script type="text/javascript">//<![CDATA[
     var query_params = {
-        Service: '<?php echo $_REQUEST['Service'];?>',
-        Operation: '<?php echo $_REQUEST['Operation'];?>'
-        <?php
+        Service: '<?hh echo $_REQUEST['Service'];?>',
+        Operation: '<?hh echo $_REQUEST['Operation'];?>'
+        <?hh
     for($i =0; $i <10; $i++) {
         if($_REQUEST['arg_key' . $i] != "") {
             echo ',' . $_REQUEST['arg_key' . $i] . ': \'' . $_REQUEST['arg_val' . $i] . '\'' . "\n";
@@ -187,7 +187,7 @@ JavaScript:<div id="res"></div>
         }
         $.ajax({
                 type: "GET",
-                url: "<?php echo $_REQUEST['EndPoint'];?>json.php",
+                url: "<?hh echo $_REQUEST['EndPoint'];?>json.php",
                 dataType: 'json',
                 data: query_params,
                 success: recvdata,
@@ -195,7 +195,7 @@ JavaScript:<div id="res"></div>
                  });
     });
 //]]></script>
-<?php } ?>
+<?hh } ?>
 
 </body>
 </html>

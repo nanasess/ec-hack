@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
 * Fast, light and safe Cache Class

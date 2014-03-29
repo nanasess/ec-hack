@@ -1,4 +1,4 @@
-<?php
+<?hh
   /*
    * Copyright(c) 2000-2013 LOCKON CO.,LTD. All Rights Reserved.
    *

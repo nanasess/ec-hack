@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This file contains the code for the TCP SOAP server.
  *

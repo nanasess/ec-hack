@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates using the Wrapper decorator
 */

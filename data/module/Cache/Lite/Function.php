@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
 * This class extends Cache_Lite and can be used to cache the result and output of functions/methods

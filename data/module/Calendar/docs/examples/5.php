@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: generating elements of a form with PEAR::Calendar, using
 * selections as well as validating the submission
@@ -34,7 +34,7 @@ if (!isset($_POST['s'])) $_POST['s'] = date('s');
 </head>
 <body>
 <h1>Select and Update</h1>
-<?php
+<?hh
 if ( isset($_POST['update']) ) {
     $Second = & new Calendar_Second($_POST['y'],$_POST['m'],$_POST['d'],$_POST['h'],$_POST['i'],$_POST['s']);
     if ( !$Second->isValid() ) {
@@ -56,10 +56,10 @@ $Minute = new Calendar_Minute($_POST['y'],$_POST['m'],$_POST['d'],$_POST['h'],$_
 $Second = new Calendar_Second($_POST['y'],$_POST['m'],$_POST['d'],$_POST['h'],$_POST['i'],$_POST['s']);
 ?>
 <p><b>Set the alarm clock</p></p>
-<form action="<?php echo ( $_SERVER['PHP_SELF'] ); ?>" method="post">
-Year: <input type="text" name="y" value="<?php echo ( $_POST['y'] ); ?>" size="4">&nbsp;
+<form action="<?hh echo ( $_SERVER['PHP_SELF'] ); ?>" method="post">
+Year: <input type="text" name="y" value="<?hh echo ( $_POST['y'] ); ?>" size="4">&nbsp;
 Month:<select name="m">
-<?php
+<?hh
 $selection = array($Month);
 $Year->build($selection);
 while ( $Child = & $Year->fetch() ) {
@@ -72,7 +72,7 @@ while ( $Child = & $Year->fetch() ) {
 ?>
 </select>&nbsp;
 Day:<select name="d">
-<?php
+<?hh
 $selection = array($Day);
 $Month->build($selection);
 while ( $Child = & $Month->fetch() ) {
@@ -85,7 +85,7 @@ while ( $Child = & $Month->fetch() ) {
 ?>
 </select>&nbsp;
 Hour:<select name="h">
-<?php
+<?hh
 $selection = array($Hour);
 $Day->build($selection);
 while ( $Child = & $Day->fetch() ) {
@@ -98,7 +98,7 @@ while ( $Child = & $Day->fetch() ) {
 ?>
 </select>&nbsp;
 Minute:<select name="i">
-<?php
+<?hh
 $selection = array($Minute);
 $Hour->build($selection);
 while ( $Child = & $Hour->fetch() ) {
@@ -111,7 +111,7 @@ while ( $Child = & $Hour->fetch() ) {
 ?>
 </select>&nbsp;
 Second:<select name="s">
-<?php
+<?hh
 $selection = array($Second);
 $Minute->build($selection);
 while ( $Child = & $Minute->fetch() ) {
@@ -124,9 +124,9 @@ while ( $Child = & $Minute->fetch() ) {
 ?>
 </select>&nbsp;
 <input type="submit" name="update" value="Set Alarm"><br>
-<?php
+<?hh
 }
 ?>
-<?php echo ( '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>' ); ?>
+<?hh echo ( '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>' ); ?>
 </body>
 </html>

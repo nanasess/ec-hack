@@ -1,4 +1,4 @@
-<?php
+<?hh
 require_once(realpath(dirname(__FILE__)) . "/../../../data/class/util/SC_Utils.php");
 
 /**

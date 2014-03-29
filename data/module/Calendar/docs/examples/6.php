@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: A "personal planner" with some WML for fun
 * Note this is done the stupid way - a giant if/else for WML or HTML
@@ -32,21 +32,21 @@ if ( isset($_GET['mime']) && $_GET['mime']=='wml' ) {
 <!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
 <wml>
 <big><strong>Personal Planner Rendered with WML</strong></big>
-<?php
+<?hh
 if ( isset($_GET['viewday']) ) {
 ?>
-<p><strong>Viewing <?php echo ( date('l, jS of F, Y',$Day->getTimeStamp()) ); ?></strong></p>
+<p><strong>Viewing <?hh echo ( date('l, jS of F, Y',$Day->getTimeStamp()) ); ?></strong></p>
 <p>
 <anchor>
 Back to Month View
-<go href="<?php
+<go href="<?hh
 echo ( "?y=".$Day->thisYear()."&amp;m=".
         $Day->thisMonth()."&amp;d=".$Day->thisDay()."&amp;mime=wml" );
 ?>"/>
 </anchor>
 </p>
 <table>
-<?php
+<?hh
     $Day->build();
     while ( $Hour = & $Day->fetch() ) {
         echo ( "<tr>\n" );
@@ -55,15 +55,15 @@ echo ( "?y=".$Day->thisYear()."&amp;m=".
     }
 ?>
 </table>
-<?php
+<?hh
 } else {
 ?>
-<p><strong><?php echo ( date('F Y',$Month->getTimeStamp()) ); ?></strong></p>
+<p><strong><?hh echo ( date('F Y',$Month->getTimeStamp()) ); ?></strong></p>
 <table>
 <tr>
 <td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td><td>S</td>
 </tr>
-<?php
+<?hh
 $Month->build($selection);
 while ( $Day = $Month->fetch() ) {
     if ( $Day->isFirst() ) {
@@ -89,7 +89,7 @@ while ( $Day = $Month->fetch() ) {
 <td>
 <anchor>
 &lt;&lt;
-<go href="<?php
+<go href="<?hh
 echo ( "?y=".$Month->thisYear()."&amp;m=".
         $Month->prevMonth()."&amp;d=".$Month->thisDay()."&amp;mime=wml" );
 ?>"/>
@@ -99,7 +99,7 @@ echo ( "?y=".$Month->thisYear()."&amp;m=".
 <td>
 <anchor>
 &gt;&gt;
-<go href="<?php
+<go href="<?hh
 echo ( "?y=".$Month->thisYear()."&amp;m=".
         $Month->nextMonth()."&amp;d=".$Month->thisDay()."&amp;mime=wml" );
 ?>"/>
@@ -108,13 +108,13 @@ echo ( "?y=".$Month->thisYear()."&amp;m=".
 </tr>
 </table>
 
-<?php
+<?hh
 }
 ?>
-<p><a href="<?php echo ( $_SERVER['PHP_SELF'] ); ?>">Back to HTML</a></p>
-<?php echo ( '<p>Took: '.(getmicrotime()-$start).' seconds</p>' ); ?>
+<p><a href="<?hh echo ( $_SERVER['PHP_SELF'] ); ?>">Back to HTML</a></p>
+<?hh echo ( '<p>Took: '.(getmicrotime()-$start).' seconds</p>' ); ?>
 </wml>
-<?php
+<?hh
 #-----------------------------------------------------------------------------#
 } else {
 ?>
@@ -125,22 +125,22 @@ echo ( "?y=".$Month->thisYear()."&amp;m=".
 </head>
 <body>
 <h1>Personal Planner Rendered with HTML</h1>
-<p>To view in WML, click <a href="<?php echo ( $_SERVER['PHP_SELF'] ); ?>?mime=wml">here</a> or place a ?mime=wml at the end of any URL.
+<p>To view in WML, click <a href="<?hh echo ( $_SERVER['PHP_SELF'] ); ?>?mime=wml">here</a> or place a ?mime=wml at the end of any URL.
 Note that <a href="http://www.opera.com/download">Opera</a> supports WML natively and Mozilla / Firefox has the WMLBrowser
 plugin: <a href="http://wmlbrowser.mozdev.org">wmlbrowser.mozdev.org</a></p>
-<?php
+<?hh
 if ( isset($_GET['viewday']) ) {
 ?>
-<p><strong>Viewing <?php echo ( date('l, jS of F, Y',$Day->getTimeStamp()) ); ?></strong></p>
+<p><strong>Viewing <?hh echo ( date('l, jS of F, Y',$Day->getTimeStamp()) ); ?></strong></p>
 <p>
 <anchor>
-<a href="<?php
+<a href="<?hh
 echo ( "?y=".$Day->thisYear()."&amp;m=".
         $Day->thisMonth()."&amp;d=".$Day->thisDay());
 ?>">Back to Month View</a>
 </p>
 <table>
-<?php
+<?hh
     $Day->build();
     while ( $Hour = & $Day->fetch() ) {
         echo ( "<tr>\n" );
@@ -149,15 +149,15 @@ echo ( "?y=".$Day->thisYear()."&amp;m=".
     }
 ?>
 </table>
-<?php
+<?hh
 } else {
 ?>
-<p><strong><?php echo ( date('F Y',$Month->getTimeStamp()) ); ?></strong></p>
+<p><strong><?hh echo ( date('F Y',$Month->getTimeStamp()) ); ?></strong></p>
 <table>
 <tr>
 <td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td><td>S</td>
 </tr>
-<?php
+<?hh
 $Month->build($selection);
 while ( $Day = $Month->fetch() ) {
     if ( $Day->isFirst() ) {
@@ -181,7 +181,7 @@ while ( $Day = $Month->fetch() ) {
 ?>
 <tr>
 <td>
-<a href="<?php
+<a href="<?hh
 echo ( "?y=".$Month->thisYear()."&amp;m=".
         $Month->prevMonth()."&amp;d=".$Month->thisDay() );
 ?>">
@@ -189,7 +189,7 @@ echo ( "?y=".$Month->thisYear()."&amp;m=".
 </td>
 <td></td><td></td><td></td><td></td><td></td>
 <td>
-<a href="<?php
+<a href="<?hh
 echo ( "?y=".$Month->thisYear()."&amp;m=".
         $Month->nextMonth()."&amp;d=".$Month->thisDay() );
 ?>">&gt;&gt;</a>
@@ -197,14 +197,14 @@ echo ( "?y=".$Month->thisYear()."&amp;m=".
 </tr>
 </table>
 
-<?php
+<?hh
 }
 ?>
 
 
-<?php echo ( '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>' ); ?>
+<?hh echo ( '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>' ); ?>
 </body>
 </html>
-<?php
+<?hh
 }
 ?>

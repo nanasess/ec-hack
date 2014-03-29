@@ -1,4 +1,4 @@
-<?php
+<?hh
 // $Id: week_firstday_0_test.php,v 1.1 2005/10/20 18:57:52 quipo Exp $
 define('CALENDAR_FIRST_DAY_OF_WEEK', 0); //force firstDay = Sunday
 

@@ -1,4 +1,4 @@
-<?php
+<?hh
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $HOME = realpath(dirname(__FILE__)) . "/../..";

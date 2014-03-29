@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * This file is part of EC-CUBE
  *
@@ -241,7 +241,7 @@ class SC_Batch_Update extends SC_Batch
 
     public function makeDistInfo($bkupDistInfoArray)
     {
-        $src = "<?php\n"
+        $src = "<?hh\n"
              . '$distifo = array(' . "\n";
 
         foreach ($bkupDistInfoArray as $key => $value) {

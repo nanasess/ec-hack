@@ -1,5 +1,5 @@
 #!/usr/local/bin/php -q
-<?php
+<?hh
 /*
  * EC-CUBE 動作検証用会員データ生成スクリプト
  *

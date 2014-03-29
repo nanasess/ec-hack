@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This class provides methods to detect and convert binary data from an to
  * hexadecimal strings.

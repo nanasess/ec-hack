@@ -1,4 +1,4 @@
-<?php
+<?hh
 require_once '../../../../require.php';
 header('Content-Type: application/x-javascript');
 ?>
@@ -19,14 +19,14 @@ header('Content-Type: application/x-javascript');
 
 (function() {
 // オーナーズストア通信スクリプトのパス
-var upgrade_url = '<?php echo ROOT_URLPATH ?>upgrade/<?php echo DIR_INDEX_PATH; ?>';
+var upgrade_url = '<?hh echo ROOT_URLPATH ?>upgrade/<?hh echo DIR_INDEX_PATH; ?>';
 
 // ロード中メッセージ「サーバーと通信中です」
 var loading_message = '\u30b5\u30fc\u30d0\u30fc\u3068\u901a\u4fe1\u4e2d\u3067\u3059';
 
 // ロード中画像の先読み
 var loading_img = new Image();
-loading_img.src = '<?php echo ROOT_URLPATH . USER_DIR ?>packages/default/img/ajax/loading.gif';
+loading_img.src = '<?hh echo ROOT_URLPATH . USER_DIR ?>packages/default/img/ajax/loading.gif';
 
 var OwnersStore = function() {}
 OwnersStore.prototype = {

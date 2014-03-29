@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
  * This file is part of EC-CUBE
  *
@@ -1022,7 +1022,7 @@ function lfMakeConfigFile()
     }
 
     // FIXME 変数出力はエスケープすべき
-    $config_data = "<?php\n"
+    $config_data = "<?hh\n"
                  . "define('ECCUBE_INSTALL', 'ON');\n"
                  . "define('HTTP_URL', '"              . $normal_url . "');\n"
                  . "define('HTTPS_URL', '"             . $secure_url . "');\n"

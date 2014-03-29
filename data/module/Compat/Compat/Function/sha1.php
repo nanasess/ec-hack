@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * Replace sha1()

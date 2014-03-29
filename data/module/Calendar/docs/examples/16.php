@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: demonstrates using the Uri decorator
 */
@@ -26,6 +26,6 @@ echo ( "This Uri:\t".$Uri->this('month')."\n" );
 echo ( "Next Uri:\t".$Uri->next('month')."\n</pre>" );
 ?>
 <p>
-<a href="<?php echo($_SERVER['PHP_SELF'].'?'.$Uri->prev('month'));?>">Prev</a> :
-<a href="<?php echo($_SERVER['PHP_SELF'].'?'.$Uri->next('month'));?>">Next</a>
+<a href="<?hh echo($_SERVER['PHP_SELF'].'?'.$Uri->prev('month'));?>">Prev</a> :
+<a href="<?hh echo($_SERVER['PHP_SELF'].'?'.$Uri->next('month'));?>">Next</a>
 </p>

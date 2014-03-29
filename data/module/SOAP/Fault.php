@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * This file contains the SOAP_Fault class, used for all error objects in this
  * package.

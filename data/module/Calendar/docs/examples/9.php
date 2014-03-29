@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: simple example on i18N
 */

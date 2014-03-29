@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: same as 1.php, but using the PEAR::Date engine
 * Notice the use of the CALENDAR_ENGINE constant, which

@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /**
  * PHP implementation of SHA-256 hash function

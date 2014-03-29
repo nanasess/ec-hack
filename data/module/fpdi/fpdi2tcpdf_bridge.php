@@ -1,4 +1,4 @@
-<?php
+<?hh
 //
 //  FPDI - Version 1.4.1
 //

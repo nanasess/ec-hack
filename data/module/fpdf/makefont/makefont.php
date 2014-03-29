@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*******************************************************************************
 * Utility to generate font definition files                                    *
 *                                                                              *
@@ -283,7 +283,7 @@ function SaveToFile($file, $s, $mode)
 
 function MakeDefinitionFile($file, $type, $enc, $embed, $map, $info)
 {
-	$s = "<?php\n";
+	$s = "<?hh\n";
 	$s .= '$type = \''.$type."';\n";
 	$s .= '$name = \''.$info['FontName']."';\n";
 	$s .= '$desc = '.MakeFontDescriptor($info).";\n";

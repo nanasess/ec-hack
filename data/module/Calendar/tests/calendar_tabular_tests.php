@@ -1,4 +1,4 @@
-<?php
+<?hh
 // $Id: calendar_tabular_tests.php,v 1.2 2005/10/20 18:59:45 quipo Exp $
 
 require_once('simple_include.php');

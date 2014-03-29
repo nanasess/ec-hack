@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * The Mail_mimeDecode class is used to decode mail/mime messages
  *

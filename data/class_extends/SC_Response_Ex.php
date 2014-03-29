@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 require_once CLASS_REALDIR . 'SC_Response.php';
 

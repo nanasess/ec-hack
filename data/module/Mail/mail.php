@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
  * internal PHP-mail() implementation of the PEAR Mail:: interface.
  *

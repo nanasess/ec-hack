@@ -1,4 +1,4 @@
-<?php
+<?hh
 // $Id: util_textual_test.php,v 1.1 2004/08/16 12:56:10 hfuecks Exp $
 
 require_once('simple_include.php');

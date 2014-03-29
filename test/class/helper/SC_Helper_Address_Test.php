@@ -1,4 +1,4 @@
-<?php
+<?hh
 
 /*
  * To change this template, choose Tools | Templates

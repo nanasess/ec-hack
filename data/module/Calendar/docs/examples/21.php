@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: a complete year with numeric week numbers
 */
@@ -35,7 +35,7 @@ $Year->build();
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title> <?php echo $Year->thisYear(); ?> </title>
+<title> <?hh echo $Year->thisYear(); ?> </title>
 <style type="text/css">
 body {
     font-family: Georgia, serif;
@@ -80,19 +80,19 @@ th, td {
 <body>
 <table>
 <caption class="year">
-<?php echo $Year->thisYear(); ?>
+<?hh echo $Year->thisYear(); ?>
 <div id="next">
-<a href="?year=<?php echo $Year->nextYear(); ?>&week_type=<?php echo $_GET['week_type']; ?>">>></a>
+<a href="?year=<?hh echo $Year->nextYear(); ?>&week_type=<?hh echo $_GET['week_type']; ?>">>></a>
 </div>
 <div id="prev">
-<a href="?year=<?php echo $Year->prevYear(); ?>&week_type=<?php echo $_GET['week_type']; ?>"><<</a>
+<a href="?year=<?hh echo $Year->prevYear(); ?>&week_type=<?hh echo $_GET['week_type']; ?>"><<</a>
 </div>
 <div id="week_type">
-<a href="?year=<?php echo $Year->thisYear(); ?>&week_type=n_in_year">Weeks by Year</a> : 
-<a href="?year=<?php echo $Year->thisYear(); ?>&week_type=n_in_month">Weeks by Month</a> 
+<a href="?year=<?hh echo $Year->thisYear(); ?>&week_type=n_in_year">Weeks by Year</a> : 
+<a href="?year=<?hh echo $Year->thisYear(); ?>&week_type=n_in_month">Weeks by Month</a> 
 </div>
 </caption>
-<?php
+<?hh
 $i = 0;
 while ($Month = $Year->fetch()) {
 
@@ -134,6 +134,6 @@ while ($Month = $Year->fetch()) {
 }
 ?>
 </table>
-<p>Took: <?php echo ((getmicrotime()-$start)); ?></p>
+<p>Took: <?hh echo ((getmicrotime()-$start)); ?></p>
 </body>
 </html>

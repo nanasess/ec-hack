@@ -1,4 +1,4 @@
-<?php
+<?hh
 /**
 * Description: Performs same behaviour as 2.php but uses Month::buildWeekDays()
 * and is faster
@@ -68,7 +68,7 @@ td {
 
 <body>
 
-<?php
+<?hh
 $selectedDays = array (
     new Calendar_Day($_GET['y'],$_GET['m'],$_GET['d']),
     new Calendar_Day($_GET['y'],12,25),
@@ -80,7 +80,7 @@ $Month->build($selectedDays);
 <h2>Built with Calendar_Month_Weekday::build()</h2>
 <table class="calendar">
 <caption>
-<?php echo ( date('F Y',$Month->getTimeStamp())); ?>
+<?hh echo ( date('F Y',$Month->getTimeStamp())); ?>
 </caption>
 <tr>
 <th>M</th>
@@ -91,7 +91,7 @@ $Month->build($selectedDays);
 <th>S</th>
 <th>S</th>
 </tr>
-<?php
+<?hh
 while ( $Day = $Month->fetch() ) {
 
     // Build a link string for each day
@@ -119,15 +119,15 @@ while ( $Day = $Month->fetch() ) {
 ?>
 <tr>
 <td>
-<a href="<?php echo ($prev);?>" class="prevMonth"><< </a>
+<a href="<?hh echo ($prev);?>" class="prevMonth"><< </a>
 </td>
 <td colspan="5">&nbsp;</td>
 <td>
-<a href="<?php echo ($next);?>" class="nextMonth"> >></a>
+<a href="<?hh echo ($next);?>" class="nextMonth"> >></a>
 </td>
 </tr>
 </table>
-<?php
+<?hh
 echo ( '<p><b>Took: '.(getmicrotime()-$start).' seconds</b></p>' );
 ?>
 </body>
